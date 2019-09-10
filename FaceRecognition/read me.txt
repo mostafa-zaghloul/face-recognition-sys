@@ -1,0 +1,2 @@
+Face Recognition System
+(multable faces - recognition from images/live camera )

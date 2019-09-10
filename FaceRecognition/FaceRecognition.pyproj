@@ -1,0 +1,324 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>5d325ea4-3308-4396-b122-a6df6790d8ae</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>face_recognition.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>FaceRecognition</Name>
+    <RootNamespace>FaceRecognition</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterId>
+    </InterpreterId>
+    <InterpreterPath>
+    </InterpreterPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="database\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="face_recognition.py" />
+    <Compile Include="model_components\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="database\database_face_detector.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system_components\output.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system_components\recognize_from_webcam.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system_components\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="utils\name_parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system_components\recognize_from_image.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="utils\fr_utils.py" />
+    <Compile Include="model_components\inception_blocks_v2.py" />
+    <Compile Include="database\faces_database.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system_components\recognition_fun.py" />
+    <Compile Include="utils\number_to_string.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="utils\triplet_loss_fun.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="utils\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="datasets\" />
+    <Folder Include="model_components\" />
+    <Folder Include="database\" />
+    <Folder Include="system_components\" />
+    <Folder Include="utils\" />
+    <Folder Include="test_images\" />
+    <Folder Include="weights\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="database\database.txt" />
+    <Content Include="datasets\test_happy.h5" />
+    <Content Include="datasets\train_face.h5" />
+    <Content Include="datasets\train_happy.h5" />
+    <Content Include="test_images\2people.jpg" />
+    <Content Include="read me.txt" />
+    <Content Include="weights\bn1_b.csv" />
+    <Content Include="weights\bn1_m.csv" />
+    <Content Include="weights\bn1_v.csv" />
+    <Content Include="weights\bn1_w.csv" />
+    <Content Include="weights\bn2_b.csv" />
+    <Content Include="weights\bn2_m.csv" />
+    <Content Include="weights\bn2_v.csv" />
+    <Content Include="weights\bn2_w.csv" />
+    <Content Include="weights\bn3_b.csv" />
+    <Content Include="weights\bn3_m.csv" />
+    <Content Include="weights\bn3_v.csv" />
+    <Content Include="weights\bn3_w.csv" />
+    <Content Include="weights\conv1_b.csv" />
+    <Content Include="weights\conv1_w.csv" />
+    <Content Include="weights\conv2_b.csv" />
+    <Content Include="weights\conv2_w.csv" />
+    <Content Include="weights\conv3_b.csv" />
+    <Content Include="weights\conv3_w.csv" />
+    <Content Include="weights\dense_b.csv" />
+    <Content Include="weights\dense_w.csv" />
+    <Content Include="weights\inception_3a_1x1_bn_b.csv" />
+    <Content Include="weights\inception_3a_1x1_bn_m.csv" />
+    <Content Include="weights\inception_3a_1x1_bn_v.csv" />
+    <Content Include="weights\inception_3a_1x1_bn_w.csv" />
+    <Content Include="weights\inception_3a_1x1_conv_b.csv" />
+    <Content Include="weights\inception_3a_1x1_conv_w.csv" />
+    <Content Include="weights\inception_3a_3x3_bn1_b.csv" />
+    <Content Include="weights\inception_3a_3x3_bn1_m.csv" />
+    <Content Include="weights\inception_3a_3x3_bn1_v.csv" />
+    <Content Include="weights\inception_3a_3x3_bn1_w.csv" />
+    <Content Include="weights\inception_3a_3x3_bn2_b.csv" />
+    <Content Include="weights\inception_3a_3x3_bn2_m.csv" />
+    <Content Include="weights\inception_3a_3x3_bn2_v.csv" />
+    <Content Include="weights\inception_3a_3x3_bn2_w.csv" />
+    <Content Include="weights\inception_3a_3x3_conv1_b.csv" />
+    <Content Include="weights\inception_3a_3x3_conv1_w.csv" />
+    <Content Include="weights\inception_3a_3x3_conv2_b.csv" />
+    <Content Include="weights\inception_3a_3x3_conv2_w.csv" />
+    <Content Include="weights\inception_3a_5x5_bn1_b.csv" />
+    <Content Include="weights\inception_3a_5x5_bn1_m.csv" />
+    <Content Include="weights\inception_3a_5x5_bn1_v.csv" />
+    <Content Include="weights\inception_3a_5x5_bn1_w.csv" />
+    <Content Include="weights\inception_3a_5x5_bn2_b.csv" />
+    <Content Include="weights\inception_3a_5x5_bn2_m.csv" />
+    <Content Include="weights\inception_3a_5x5_bn2_v.csv" />
+    <Content Include="weights\inception_3a_5x5_bn2_w.csv" />
+    <Content Include="weights\inception_3a_5x5_conv1_b.csv" />
+    <Content Include="weights\inception_3a_5x5_conv1_w.csv" />
+    <Content Include="weights\inception_3a_5x5_conv2_b.csv" />
+    <Content Include="weights\inception_3a_5x5_conv2_w.csv" />
+    <Content Include="weights\inception_3a_pool_bn_b.csv" />
+    <Content Include="weights\inception_3a_pool_bn_m.csv" />
+    <Content Include="weights\inception_3a_pool_bn_v.csv" />
+    <Content Include="weights\inception_3a_pool_bn_w.csv" />
+    <Content Include="weights\inception_3a_pool_conv_b.csv" />
+    <Content Include="weights\inception_3a_pool_conv_w.csv" />
+    <Content Include="weights\inception_3b_1x1_bn_b.csv" />
+    <Content Include="weights\inception_3b_1x1_bn_m.csv" />
+    <Content Include="weights\inception_3b_1x1_bn_v.csv" />
+    <Content Include="weights\inception_3b_1x1_bn_w.csv" />
+    <Content Include="weights\inception_3b_1x1_conv_b.csv" />
+    <Content Include="weights\inception_3b_1x1_conv_w.csv" />
+    <Content Include="weights\inception_3b_3x3_bn1_b.csv" />
+    <Content Include="weights\inception_3b_3x3_bn1_m.csv" />
+    <Content Include="weights\inception_3b_3x3_bn1_v.csv" />
+    <Content Include="weights\inception_3b_3x3_bn1_w.csv" />
+    <Content Include="weights\inception_3b_3x3_bn2_b.csv" />
+    <Content Include="weights\inception_3b_3x3_bn2_m.csv" />
+    <Content Include="weights\inception_3b_3x3_bn2_v.csv" />
+    <Content Include="weights\inception_3b_3x3_bn2_w.csv" />
+    <Content Include="weights\inception_3b_3x3_conv1_b.csv" />
+    <Content Include="weights\inception_3b_3x3_conv1_w.csv" />
+    <Content Include="weights\inception_3b_3x3_conv2_b.csv" />
+    <Content Include="weights\inception_3b_3x3_conv2_w.csv" />
+    <Content Include="weights\inception_3b_5x5_bn1_b.csv" />
+    <Content Include="weights\inception_3b_5x5_bn1_m.csv" />
+    <Content Include="weights\inception_3b_5x5_bn1_v.csv" />
+    <Content Include="weights\inception_3b_5x5_bn1_w.csv" />
+    <Content Include="weights\inception_3b_5x5_bn2_b.csv" />
+    <Content Include="weights\inception_3b_5x5_bn2_m.csv" />
+    <Content Include="weights\inception_3b_5x5_bn2_v.csv" />
+    <Content Include="weights\inception_3b_5x5_bn2_w.csv" />
+    <Content Include="weights\inception_3b_5x5_conv1_b.csv" />
+    <Content Include="weights\inception_3b_5x5_conv1_w.csv" />
+    <Content Include="weights\inception_3b_5x5_conv2_b.csv" />
+    <Content Include="weights\inception_3b_5x5_conv2_w.csv" />
+    <Content Include="weights\inception_3b_pool_bn_b.csv" />
+    <Content Include="weights\inception_3b_pool_bn_m.csv" />
+    <Content Include="weights\inception_3b_pool_bn_v.csv" />
+    <Content Include="weights\inception_3b_pool_bn_w.csv" />
+    <Content Include="weights\inception_3b_pool_conv_b.csv" />
+    <Content Include="weights\inception_3b_pool_conv_w.csv" />
+    <Content Include="weights\inception_3c_3x3_bn1_b.csv" />
+    <Content Include="weights\inception_3c_3x3_bn1_m.csv" />
+    <Content Include="weights\inception_3c_3x3_bn1_v.csv" />
+    <Content Include="weights\inception_3c_3x3_bn1_w.csv" />
+    <Content Include="weights\inception_3c_3x3_bn2_b.csv" />
+    <Content Include="weights\inception_3c_3x3_bn2_m.csv" />
+    <Content Include="weights\inception_3c_3x3_bn2_v.csv" />
+    <Content Include="weights\inception_3c_3x3_bn2_w.csv" />
+    <Content Include="weights\inception_3c_3x3_conv1_b.csv" />
+    <Content Include="weights\inception_3c_3x3_conv1_w.csv" />
+    <Content Include="weights\inception_3c_3x3_conv2_b.csv" />
+    <Content Include="weights\inception_3c_3x3_conv2_w.csv" />
+    <Content Include="weights\inception_3c_5x5_bn1_b.csv" />
+    <Content Include="weights\inception_3c_5x5_bn1_m.csv" />
+    <Content Include="weights\inception_3c_5x5_bn1_v.csv" />
+    <Content Include="weights\inception_3c_5x5_bn1_w.csv" />
+    <Content Include="weights\inception_3c_5x5_bn2_b.csv" />
+    <Content Include="weights\inception_3c_5x5_bn2_m.csv" />
+    <Content Include="weights\inception_3c_5x5_bn2_v.csv" />
+    <Content Include="weights\inception_3c_5x5_bn2_w.csv" />
+    <Content Include="weights\inception_3c_5x5_conv1_b.csv" />
+    <Content Include="weights\inception_3c_5x5_conv1_w.csv" />
+    <Content Include="weights\inception_3c_5x5_conv2_b.csv" />
+    <Content Include="weights\inception_3c_5x5_conv2_w.csv" />
+    <Content Include="weights\inception_4a_1x1_bn_b.csv" />
+    <Content Include="weights\inception_4a_1x1_bn_m.csv" />
+    <Content Include="weights\inception_4a_1x1_bn_v.csv" />
+    <Content Include="weights\inception_4a_1x1_bn_w.csv" />
+    <Content Include="weights\inception_4a_1x1_conv_b.csv" />
+    <Content Include="weights\inception_4a_1x1_conv_w.csv" />
+    <Content Include="weights\inception_4a_3x3_bn1_b.csv" />
+    <Content Include="weights\inception_4a_3x3_bn1_m.csv" />
+    <Content Include="weights\inception_4a_3x3_bn1_v.csv" />
+    <Content Include="weights\inception_4a_3x3_bn1_w.csv" />
+    <Content Include="weights\inception_4a_3x3_bn2_b.csv" />
+    <Content Include="weights\inception_4a_3x3_bn2_m.csv" />
+    <Content Include="weights\inception_4a_3x3_bn2_v.csv" />
+    <Content Include="weights\inception_4a_3x3_bn2_w.csv" />
+    <Content Include="weights\inception_4a_3x3_conv1_b.csv" />
+    <Content Include="weights\inception_4a_3x3_conv1_w.csv" />
+    <Content Include="weights\inception_4a_3x3_conv2_b.csv" />
+    <Content Include="weights\inception_4a_3x3_conv2_w.csv" />
+    <Content Include="weights\inception_4a_5x5_bn1_b.csv" />
+    <Content Include="weights\inception_4a_5x5_bn1_m.csv" />
+    <Content Include="weights\inception_4a_5x5_bn1_v.csv" />
+    <Content Include="weights\inception_4a_5x5_bn1_w.csv" />
+    <Content Include="weights\inception_4a_5x5_bn2_b.csv" />
+    <Content Include="weights\inception_4a_5x5_bn2_m.csv" />
+    <Content Include="weights\inception_4a_5x5_bn2_v.csv" />
+    <Content Include="weights\inception_4a_5x5_bn2_w.csv" />
+    <Content Include="weights\inception_4a_5x5_conv1_b.csv" />
+    <Content Include="weights\inception_4a_5x5_conv1_w.csv" />
+    <Content Include="weights\inception_4a_5x5_conv2_b.csv" />
+    <Content Include="weights\inception_4a_5x5_conv2_w.csv" />
+    <Content Include="weights\inception_4a_pool_bn_b.csv" />
+    <Content Include="weights\inception_4a_pool_bn_m.csv" />
+    <Content Include="weights\inception_4a_pool_bn_v.csv" />
+    <Content Include="weights\inception_4a_pool_bn_w.csv" />
+    <Content Include="weights\inception_4a_pool_conv_b.csv" />
+    <Content Include="weights\inception_4a_pool_conv_w.csv" />
+    <Content Include="weights\inception_4e_3x3_bn1_b.csv" />
+    <Content Include="weights\inception_4e_3x3_bn1_m.csv" />
+    <Content Include="weights\inception_4e_3x3_bn1_v.csv" />
+    <Content Include="weights\inception_4e_3x3_bn1_w.csv" />
+    <Content Include="weights\inception_4e_3x3_bn2_b.csv" />
+    <Content Include="weights\inception_4e_3x3_bn2_m.csv" />
+    <Content Include="weights\inception_4e_3x3_bn2_v.csv" />
+    <Content Include="weights\inception_4e_3x3_bn2_w.csv" />
+    <Content Include="weights\inception_4e_3x3_conv1_b.csv" />
+    <Content Include="weights\inception_4e_3x3_conv1_w.csv" />
+    <Content Include="weights\inception_4e_3x3_conv2_b.csv" />
+    <Content Include="weights\inception_4e_3x3_conv2_w.csv" />
+    <Content Include="weights\inception_4e_5x5_bn1_b.csv" />
+    <Content Include="weights\inception_4e_5x5_bn1_m.csv" />
+    <Content Include="weights\inception_4e_5x5_bn1_v.csv" />
+    <Content Include="weights\inception_4e_5x5_bn1_w.csv" />
+    <Content Include="weights\inception_4e_5x5_bn2_b.csv" />
+    <Content Include="weights\inception_4e_5x5_bn2_m.csv" />
+    <Content Include="weights\inception_4e_5x5_bn2_v.csv" />
+    <Content Include="weights\inception_4e_5x5_bn2_w.csv" />
+    <Content Include="weights\inception_4e_5x5_conv1_b.csv" />
+    <Content Include="weights\inception_4e_5x5_conv1_w.csv" />
+    <Content Include="weights\inception_4e_5x5_conv2_b.csv" />
+    <Content Include="weights\inception_4e_5x5_conv2_w.csv" />
+    <Content Include="weights\inception_5a_1x1_bn_b.csv" />
+    <Content Include="weights\inception_5a_1x1_bn_m.csv" />
+    <Content Include="weights\inception_5a_1x1_bn_v.csv" />
+    <Content Include="weights\inception_5a_1x1_bn_w.csv" />
+    <Content Include="weights\inception_5a_1x1_conv_b.csv" />
+    <Content Include="weights\inception_5a_1x1_conv_w.csv" />
+    <Content Include="weights\inception_5a_3x3_bn1_b.csv" />
+    <Content Include="weights\inception_5a_3x3_bn1_m.csv" />
+    <Content Include="weights\inception_5a_3x3_bn1_v.csv" />
+    <Content Include="weights\inception_5a_3x3_bn1_w.csv" />
+    <Content Include="weights\inception_5a_3x3_bn2_b.csv" />
+    <Content Include="weights\inception_5a_3x3_bn2_m.csv" />
+    <Content Include="weights\inception_5a_3x3_bn2_v.csv" />
+    <Content Include="weights\inception_5a_3x3_bn2_w.csv" />
+    <Content Include="weights\inception_5a_3x3_conv1_b.csv" />
+    <Content Include="weights\inception_5a_3x3_conv1_w.csv" />
+    <Content Include="weights\inception_5a_3x3_conv2_b.csv" />
+    <Content Include="weights\inception_5a_3x3_conv2_m.csv" />
+    <Content Include="weights\inception_5a_3x3_conv2_v.csv" />
+    <Content Include="weights\inception_5a_3x3_conv2_w.csv" />
+    <Content Include="weights\inception_5a_pool_bn_b.csv" />
+    <Content Include="weights\inception_5a_pool_bn_m.csv" />
+    <Content Include="weights\inception_5a_pool_bn_v.csv" />
+    <Content Include="weights\inception_5a_pool_bn_w.csv" />
+    <Content Include="weights\inception_5a_pool_conv_b.csv" />
+    <Content Include="weights\inception_5a_pool_conv_w.csv" />
+    <Content Include="weights\inception_5b_1x1_bn_b.csv" />
+    <Content Include="weights\inception_5b_1x1_bn_m.csv" />
+    <Content Include="weights\inception_5b_1x1_bn_v.csv" />
+    <Content Include="weights\inception_5b_1x1_bn_w.csv" />
+    <Content Include="weights\inception_5b_1x1_conv_b.csv" />
+    <Content Include="weights\inception_5b_1x1_conv_w.csv" />
+    <Content Include="weights\inception_5b_3x3_bn1_b.csv" />
+    <Content Include="weights\inception_5b_3x3_bn1_m.csv" />
+    <Content Include="weights\inception_5b_3x3_bn1_v.csv" />
+    <Content Include="weights\inception_5b_3x3_bn1_w.csv" />
+    <Content Include="weights\inception_5b_3x3_bn2_b.csv" />
+    <Content Include="weights\inception_5b_3x3_bn2_m.csv" />
+    <Content Include="weights\inception_5b_3x3_bn2_v.csv" />
+    <Content Include="weights\inception_5b_3x3_bn2_w.csv" />
+    <Content Include="weights\inception_5b_3x3_conv1_b.csv" />
+    <Content Include="weights\inception_5b_3x3_conv1_w.csv" />
+    <Content Include="weights\inception_5b_3x3_conv2_b.csv" />
+    <Content Include="weights\inception_5b_3x3_conv2_w.csv" />
+    <Content Include="weights\inception_5b_pool_bn_b.csv" />
+    <Content Include="weights\inception_5b_pool_bn_m.csv" />
+    <Content Include="weights\inception_5b_pool_bn_v.csv" />
+    <Content Include="weights\inception_5b_pool_bn_w.csv" />
+    <Content Include="weights\inception_5b_pool_conv_b.csv" />
+    <Content Include="weights\inception_5b_pool_conv_w.csv" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
